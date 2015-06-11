@@ -15,3 +15,5 @@ var exampleGuide = "\nmultiply base & height then divide by 2 \nin order to get 
 var example = "For example" + " " + quickGuide[0] + "x" + quickGuide[1] + "/2 = 121.5" ; //Example shown with the use of array.
 
 console.log (userName + stringArea + exampleGuide +example); //Solution to the area of a triangle will be printed to the console.
+
+/* i typed 36 for base and 9 for height and my calculator gave me 162 for the area. */
