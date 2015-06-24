@@ -58,14 +58,27 @@ function numEntered(singleDigit){
 
 }
 
+function numGenerator(min, max, amount){
+
+    var randomArray = [];
+
+    for (var i = 0; i < amount; i++){
+
+        var powerBallNum = Math.random() * (max - min) + min;
+        randomArray [i] = Math.round(powerBallNum);
+
+    }
+    return randomArray;
 
 
+}
 
+// --------------------------------Main Code---------------------------------------
 
-// Main Code
 nameInput = nameEntered(nameInput); //value returned form firstName to nameInput
 console.log ("Hey " + nameInput + "!"); //Machine  will print "Hey, (User Name)!"
 
 numInput = numEntered(numInput);
-console.log ("Your PowerBall number is " + numInput +".")
 
+lotto = numGenerator(1, 59, 5);
+console.log("Your lottery numbers are " + lotto + " and your PowerBall number is " + "[" + numInput + "]!");
