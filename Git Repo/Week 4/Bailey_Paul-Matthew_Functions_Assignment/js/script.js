@@ -7,7 +7,7 @@
 //Variables
 var nameInput = prompt("Please enter your name"); //Prompt for user to enter name.
 
-// ----------Function for validating User String Input-----------
+// ----------------------FUNCTION FOR VALIDATING USER NAME INPUT------------------------------
 function nameEntered(firstName){ //User prompted to enter name.
 
     var timesClicked = 0; //Variable for times clicked.
@@ -34,7 +34,7 @@ function nameEntered(firstName){ //User prompted to enter name.
 //Variable
 var numInput = prompt("Enter your PowerBall number (1-35) "); //Prompt for user to enter a number.
 
-// --------Function for Validating user Number Input------------
+// -----------------------FUNCTION FOR VALIDATING USER NUMBER INPUT-----------------------------
 
 function numEntered(singleDigit){
 
@@ -42,43 +42,51 @@ function numEntered(singleDigit){
 
     while (singleDigit === ""){
 
+    //Code that runs when no value is entered.
         singleDigit = prompt("Enter your PowerBall Number!");
 
-        timesClicked++;
+        timesClicked++; //Increments amount of times the link is clicked.
 
         if (timesClicked > 2){
 
+            //Code that runs when link is clicked over 3 times.
+
             console.log("Sorry, you can\'t do that anymore!");
-            break;
+            break; //Break out of loop.
         }
     }
 
-    return singleDigit;
+    return singleDigit; //Return value for singleDigit
 
 
 }
+//------------- FUNCTION FOR GENERATING POWERBALL RANDOM NUMBERS---------------------
 
 function numGenerator(min, max, amount){
 
-    var randomArray = [];
+    var randomArray = []; //Random array variable
+
+    //FOR LOOP
 
     for (var i = 0; i < amount; i++){
 
         var powerBallNum = Math.random() * (max - min) + min;
-        randomArray [i] = Math.round(powerBallNum);
+        randomArray [i] = Math.round(powerBallNum); // Round off to a whole number.
 
     }
-    return randomArray;
+    return randomArray; //return value for randomArray
 
 
 }
 
-// --------------------------------Main Code---------------------------------------
+// ----------------------------- MAIN CODE ---------------------------------------
 
-nameInput = nameEntered(nameInput); //value returned form firstName to nameInput
+nameInput = nameEntered(nameInput); //value returned from firstName to nameInput (function call)
 console.log ("Hey " + nameInput + "!"); //Machine  will print "Hey, (User Name)!"
 
-numInput = numEntered(numInput);
+numInput = numEntered(numInput); //value returned singleDigit to numInput.
 
-lotto = numGenerator(1, 59, 5);
-console.log("Your lottery numbers are " + lotto + " and your PowerBall number is " + "[" + numInput + "]!");
+lotto = numGenerator(1, 59, 5); //Lotto numbers randomly generated 1-59 with 5 numbers.
+
+//Machine will print "Your lotto numbers are (5 random numbers) and your PowerBall number is (user input)!
+console.log("Your lotto numbers are " + lotto + " and your PowerBall number is " + "[" + numInput + "]!");
