@@ -4,8 +4,13 @@
 //Paul-Matthew Bailey
 //SDI Assignment: Function
 
+
+//Pop-Up alert that lets the user knows what's going on.
+alert("You\'re entering the PowerBall quick play. Click OK to continue, Good Luck!");
+
 //Variables
 var nameInput = prompt("Please enter your name"); //Prompt for user to enter name.
+
 
 // ----------------------FUNCTION FOR VALIDATING USER NAME INPUT------------------------------
 function nameEntered(firstName){ //User prompted to enter name.
@@ -34,9 +39,10 @@ function nameEntered(firstName){ //User prompted to enter name.
 //Variable
 var numInput = prompt("Enter your PowerBall number (1-35) "); //Prompt for user to enter a number.
 
+
 // -----------------------FUNCTION FOR VALIDATING USER NUMBER INPUT-----------------------------
 
-function numEntered(singleDigit){
+ function numEntered(singleDigit){
 
     var timesClicked = 0;
 
@@ -78,8 +84,9 @@ function numGenerator(min, max, amount){
 
 
 }
-
 // ----------------------------- MAIN CODE ---------------------------------------
+
+console.log(alert); //Machine will print "You're entering the PowerBall quick play. Click OK to continue, Good luck!"
 
 nameInput = nameEntered(nameInput); //value returned from firstName to nameInput (function call)
 console.log ("Hey " + nameInput + "!"); //Machine  will print "Hey, (User Name)!"
@@ -89,4 +96,4 @@ numInput = numEntered(numInput); //value returned singleDigit to numInput.
 lotto = numGenerator(1, 59, 5); //Lotto numbers randomly generated 1-59 with 5 numbers.
 
 //Machine will print "Your lotto numbers are (5 random numbers) and your PowerBall number is (user input)!
-console.log("Your lotto numbers are " + lotto + " and your PowerBall number is " + "[" + numInput + "]!");
+console.log("Your quick play lotto numbers are " + lotto + " and your PowerBall number is " + "[" + numInput + "]!");
