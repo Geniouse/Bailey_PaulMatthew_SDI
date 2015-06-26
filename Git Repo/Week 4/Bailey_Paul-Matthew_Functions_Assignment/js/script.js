@@ -5,7 +5,10 @@
 //SDI Assignment: Function
 
 
-//Pop-Up alert that lets the user knows what's going on.
+/** Pop-Up alert that lets the user knows what's going on. Machine will print
+"You're entering the PowerBall quick play. Click OK to continue, Good Luck!"
+ */
+
 alert("You\'re entering the PowerBall quick play. Click OK to continue, Good Luck!");
 
 //Variables
@@ -85,8 +88,6 @@ function numGenerator(min, max, amount){
 
 }
 // ----------------------------- MAIN CODE ---------------------------------------
-
-console.log(alert); //Machine will print "You're entering the PowerBall quick play. Click OK to continue, Good luck!"
 
 nameInput = nameEntered(nameInput); //value returned from firstName to nameInput (function call)
 console.log ("Hey " + nameInput + "!"); //Machine  will print "Hey, (User Name)!"
